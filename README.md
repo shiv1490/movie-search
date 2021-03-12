@@ -28,6 +28,6 @@ npm install
 npm start
 
 /* To run the tests */
-npm run test (basic smog test for all components and js)
+npm run test
 
 ```
