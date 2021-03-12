@@ -1,23 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Material-UI](https://material-ui.com/)
 
 ## Overview
 
-This simple application shows the list of movies retrieved from the Open Movie Database.
+This application shows the list of movies retrieved from the Open Movie Database.
 
 ## Current Features
 
-- Load list of movies from OMDb API
+- Load list of movies from [OMDb API](http://www.omdbapi.com/)
 - Pagination functionality for more records
 - Free Search Text to find movie
 - Click on Movie List to see movie details
-- Works in Chrome, IE, Edge, Mozilla
+- Works in Chrome, IE, Edge
 
 ## Bootstrap Application
 
 #### Requirements
 
-- Node.js
-- NPM
+- Node.js (Tested on v14.16.0 )
 
 ```javascript
 
