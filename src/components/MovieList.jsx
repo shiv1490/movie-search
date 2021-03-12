@@ -6,6 +6,7 @@ import {
   ListItem,
   Divider,
   Typography,
+  Avatar,
 } from "@material-ui/core";
 import { movieListStyles } from "../styles";
 
@@ -16,14 +17,17 @@ const MovieList = ({ defaultMovieList, fetchMovieDetails }) => {
     <>
       {defaultMovieList.length ? (
         <List>
-          {defaultMovieList.map((movie) => (
-            <div key={movie.imdbID}>
+          {defaultMovieList.map((movie, index) => (
+            <div key={`${index}`}>
               <ListItem button onClick={() => fetchMovieDetails(movie.imdbID)}>
-                <img
-                  alt="movie"
+                <Avatar
+                  alt="image"
+                  variant="square"
                   src={movie.Poster}
                   className={classes.movieImage}
-                ></img>
+                >
+                  M
+                </Avatar>
                 <Box marginLeft={2}>
                   <ListItemText primary={movie.Title} />
                   <ListItemText secondary={movie.Year} />
