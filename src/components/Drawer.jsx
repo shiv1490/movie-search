@@ -37,7 +37,7 @@ class Layout extends Component {
   }
 
   fetchMovieList = async (pagekey, searchText) => {
-    const searchQuery = searchText || "movie";
+    const searchQuery = searchText ? searchText.trim() : "movie";
     const result = await axios(
       `${baseUrl}&s=${searchQuery}&plot=long&type=movie&page=${pagekey}`
     );
@@ -112,13 +112,15 @@ class Layout extends Component {
             fetchMovieDetails={this.fetchMovieDetails}
           ></MovieList>
           {pageResultCount > 10 ? (
-            <Pagination
-              count={pageResultCount}
-              siblingCount={0}
-              onChange={(e, pageNumber) =>
-                this.fetchMovieList(pageNumber, searchText)
-              }
-            />
+            <Box mt={2} mb={2}>
+              <Pagination
+                count={pageResultCount}
+                siblingCount={0}
+                onChange={(e, pageNumber) =>
+                  this.fetchMovieList(pageNumber, searchText)
+                }
+              />
+            </Box>
           ) : null}
         </Drawer>
         <main className={classes.content}>
